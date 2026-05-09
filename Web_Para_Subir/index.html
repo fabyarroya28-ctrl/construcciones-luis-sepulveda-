@@ -1,0 +1,526 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="es"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Construcciones Luis Sepúlveda Rejano E.I.R.L.</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&amp;family=Metropolis:wght@400;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed": "#e6e2de",
+                    "tertiary-fixed-dim": "#cac6c2",
+                    "primary-container": "#1b1b1c",
+                    "on-primary-fixed": "#1b1b1c",
+                    "surface-tint": "#5f5e5f",
+                    "on-surface-variant": "#46474a",
+                    "on-secondary": "#ffffff",
+                    "secondary-fixed": "#ffe088",
+                    "secondary": "#735c00",
+                    "surface-container-highest": "#e5e2e1",
+                    "surface-container": "#f1edec",
+                    "on-secondary-fixed": "#241a00",
+                    "surface-container-high": "#ebe7e7",
+                    "secondary-container": "#fed65b",
+                    "on-primary-fixed-variant": "#474647",
+                    "surface": "#fdf8f8",
+                    "surface-bright": "#fdf8f8",
+                    "tertiary-container": "#1c1b19",
+                    "on-error": "#ffffff",
+                    "inverse-primary": "#c8c6c7",
+                    "surface-variant": "#e5e2e1",
+                    "on-tertiary": "#ffffff",
+                    "inverse-surface": "#313030",
+                    "inverse-on-surface": "#f4f0ef",
+                    "on-primary-container": "#858384",
+                    "primary-fixed": "#e5e2e3",
+                    "secondary-fixed-dim": "#e9c349",
+                    "primary": "#000000",
+                    "on-error-container": "#93000a",
+                    "on-primary": "#ffffff",
+                    "surface-dim": "#ddd9d9",
+                    "on-surface": "#1c1b1b",
+                    "error": "#ba1a1a",
+                    "on-tertiary-fixed": "#1c1b19",
+                    "on-background": "#1c1b1b",
+                    "outline": "#76777b",
+                    "on-secondary-fixed-variant": "#574500",
+                    "outline-variant": "#c7c6ca",
+                    "surface-container-low": "#f7f3f2",
+                    "on-secondary-container": "#745c00",
+                    "primary-fixed-dim": "#c8c6c7",
+                    "on-tertiary-container": "#868380",
+                    "tertiary": "#000000",
+                    "on-tertiary-fixed-variant": "#484644",
+                    "background": "#fdf8f8",
+                    "surface-container-lowest": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "accent-terracotta": "#C05746"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "grid-columns": "12",
+                    "margin-desktop": "80px",
+                    "section-gap-mobile": "64px",
+                    "gutter": "24px",
+                    "base": "8px",
+                    "section-gap-desktop": "120px",
+                    "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                    "headline-lg-mobile": ["Metropolis"],
+                    "label-caps": ["Metropolis"],
+                    "headline-lg": ["Metropolis"],
+                    "display-lg": ["Metropolis"],
+                    "body-lg": ["Inter"],
+                    "headline-md": ["Metropolis"],
+                    "body-md": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                    "headline-lg": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: 200px;
+            gap: 16px;
+        }
+        .bento-item-large { grid-column: span 2; grid-row: span 2; }
+        .bento-item-tall { grid-row: span 2; }
+        .bento-item-wide { grid-column: span 2; }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md overflow-x-hidden">
+<!-- TopNavBar (Shared Component) -->
+<header class="sticky top-0 w-full z-50 bg-surface/95 backdrop-blur-md border-b border-outline-variant/30 shadow-sm">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-[1440px] mx-auto">
+<a class="text-headline-md font-headline-md font-bold tracking-tight text-primary" href="#">
+                Luis Sepúlveda Rejano
+            </a>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-lg text-body-lg font-bold border-b-2 border-primary pb-1" href="#proyectos">Proyectos</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-lg text-body-lg" href="#nosotros">Nosotros</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-lg text-body-lg" href="#proceso">Proceso de Cotización</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-lg text-body-lg" href="#testimonios">Testimonios</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-lg text-body-lg" href="#contacto">Contacto</a>
+</nav>
+<button class="bg-accent-terracotta text-white px-8 py-3 rounded shadow-md hover:scale-105 transition-transform font-bold">
+                Cotiza ahora
+            </button>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="relative h-[921px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="A luxurious modern Chilean architectural masterpiece house nestled in a scenic Valparaíso landscape. The structure features clean lines, expansive glass walls, and organic materials like wood and concrete. Soft, golden hour sunlight bathes the exterior, highlighting the prestigious charcoal and warm wood tones. The mood is aspirational and serene, emphasizing high-end residential engineering excellence." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmLPGp2XlNsU1PPpGt8GJZXPRr-5G6dh_uQr8PJtdqVpntpDeH38QBxAARXdMD_s7F2A3DHFUzfWh1jOQqVB9FXHOuHExv92VV1V5ciFUQB1KvoKC4JgbjktF3zLaCzxmc7OzzV-pbNInYphSkINDj3ZDQ7sfuSMKCBYG27gfyaZklZHrTJeXwCKtqVGWucndgJqikU9C4LshBivAoIHY4wNd-vSMSrZNEYB5zBoBkbql_KmoM66IlLaPg5-YzWS4wz6dK0lE4kUk">
+<div class="absolute inset-0 bg-gradient-to-r from-primary/80 to-transparent"></div>
+</div>
+<div class="relative z-10 px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto w-full">
+<div class="max-w-2xl text-white">
+<span class="inline-block py-1 px-4 mb-6 bg-accent-terracotta/20 border border-accent-terracotta/40 text-white font-label-caps text-label-caps rounded-full">
+                    Más de 15 años de experiencia
+                </span>
+<h1 class="font-display-lg text-display-lg mb-6 leading-tight">Tu nueva casa te está esperando</h1>
+<p class="font-body-lg text-body-lg mb-10 text-white/90">
+                    Proyectos de alta calidad en Valparaíso, con financiamiento y entrega garantizada. Construimos bases sólidas para tu futuro.
+                </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-accent-terracotta text-white px-10 py-4 font-bold rounded shadow-lg hover:bg-accent-terracotta/90 transition-all">
+                        Ver proyectos disponibles
+                    </button>
+<button class="bg-white/10 backdrop-blur-md border border-white/30 text-white px-10 py-4 font-bold rounded flex items-center gap-2 hover:bg-white/20 transition-all">
+<span class="material-symbols-outlined" data-icon="chat" style="font-variation-settings: &quot;FILL&quot; 1;">chat</span>
+                        Habla con un asesor
+                    </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust Bar -->
+<div class="bg-inverse-surface py-12">
+<div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-2 md:grid-cols-4 gap-gutter text-center">
+<div>
+<div class="text-secondary-fixed font-display-lg text-headline-lg mb-1">15+</div>
+<div class="text-inverse-on-surface font-label-caps text-label-caps uppercase tracking-widest opacity-80">Años de experiencia</div>
+</div>
+<div>
+<div class="text-secondary-fixed font-display-lg text-headline-lg mb-1">200+</div>
+<div class="text-inverse-on-surface font-label-caps text-label-caps uppercase tracking-widest opacity-80">Proyectos entregados</div>
+</div>
+<div>
+<div class="text-secondary-fixed font-display-lg text-headline-lg mb-1">180+</div>
+<div class="text-inverse-on-surface font-label-caps text-label-caps uppercase tracking-widest opacity-80">Familias felices</div>
+</div>
+<div>
+<div class="text-secondary-fixed font-display-lg text-headline-lg mb-1">100%</div>
+<div class="text-inverse-on-surface font-label-caps text-label-caps uppercase tracking-widest opacity-80">Satisfacción</div>
+</div>
+</div>
+</div>
+<!-- Projects Section -->
+<section class="py-section-gap-mobile md:py-section-gap-desktop bg-surface-container-low" id="proyectos">
+<div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex justify-between items-end mb-16">
+<div>
+<h2 class="font-headline-lg text-headline-lg mb-4 text-primary">Nuestros proyectos Realizados</h2>
+<div class="w-20 h-1 bg-accent-terracotta"></div>
+</div>
+<button class="text-primary font-bold flex items-center gap-2 hover:gap-4 transition-all group">
+                    Ver todos los proyectos <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Project Card 1 -->
+<div class="bg-surface-container-lowest overflow-hidden group border border-outline-variant/20 shadow-sm hover:shadow-xl transition-all duration-500">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Modern house architecture with high ceilings and floor-to-ceiling glass windows overlooking a manicured lawn. The design uses premium charcoal metal siding and natural stone. Daylight is crisp and bright, reflecting a sophisticated and contemporary architectural style with a clean, light-mode background. The scene exudes luxury and structural perfection." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMJPFS1Xxf2wT9ahb4rj5bUM3H6i5dvtWBltUxAmHxpbbC34OSEFh2pk6PqgTjca64CV64tRn4VUFWxD1gVH0NvxZVsM2sGvCtvQ0X9ShInNJ-hIf3FnP282SPF12muEEe1TVwPhPVJWR-Jd2mKT28ke4A9h27Ta80iaaREldYhjQj_uRlHt8n7MRnI-9eFYP4VQfCNisFZMjPFgBx8PtEjYDKB17on7QKlgk4KEvQyUo7abvB5ZkVwnEwxX25scTvdMuK8BNwbZ8">
+<div class="absolute top-4 left-4">
+<span class="bg-primary text-white font-label-caps text-[10px] px-3 py-1 rounded-sm uppercase">Disponible</span>
+</div>
+</div>
+<div class="p-8">
+<span class="text-accent-terracotta font-label-caps text-label-caps mb-2 block">VALPARAÍSO</span>
+<h3 class="font-headline-md text-headline-md mb-4 text-primary">Proyecto Cordillera I</h3>
+<p class="text-on-surface-variant font-body-md mb-6">Terminaciones, Iluminacion, Estructuras</p>
+<button class="w-full py-4 border border-primary text-primary font-bold hover:bg-primary hover:text-white transition-all">Ver más detalles</button>
+</div>
+</div>
+<!-- Project Card 2 -->
+<div class="bg-surface-container-lowest overflow-hidden group border border-outline-variant/20 shadow-sm hover:shadow-xl transition-all duration-500">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Interior view of a modern luxury living room designed by Luis Sepúlveda Rejano. Large windows show a coastal view, with minimal high-end furniture. The color palette is charcoal, off-white, and warm wood accents. The lighting is diffused and professional, creating an atmosphere of architectural precision and residential comfort." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuDT1vvF8_nTNbkB0VYMIv81INP2_-tLIUAVx_xzbrheAybrt0E_34c8xYops_lTkSYIY5UO-CC8CqynoSE6bvh_S5LD8eYKbTr7AaXz7pRScq4wyjQg7IpC_oslaanHUmg1WbHweVZBLoxxdXYedPifWEgPmXdg5eT66Zmd5cLTijaw50ZW5RxUVNdA25keZiOuawfTWIiYHi2M_V5z79e7gw5Ssp5QIWJuzRQ6L4vsuZX5OB1HBmw89oTPWbL4s1cfkxC9jUImc">
+<div class="absolute top-4 left-4">
+<span class="bg-primary text-white font-label-caps text-[10px] px-3 py-1 rounded-sm uppercase">Disponible</span>
+</div>
+</div>
+<div class="p-8">
+<span class="text-accent-terracotta font-label-caps text-label-caps mb-2 block">VALPARAÍSO</span>
+<h3 class="font-headline-md text-headline-md mb-4 text-primary">Residencia Mar y Sol</h3>
+<p class="text-on-surface-variant font-body-md mb-6">Remodelacion De Interior</p>
+<button class="w-full py-4 border border-primary text-primary font-bold hover:bg-primary hover:text-white transition-all">Ver más detalles</button>
+</div>
+</div>
+<!-- Project Card 3 -->
+<div class="bg-surface-container-lowest overflow-hidden group border border-outline-variant/20 shadow-sm hover:shadow-xl transition-all duration-500">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Exterior shot of a minimalist geometric house facade at sunset. The architectural design features cantilevered roofs and large stone panels. Warm interior lights glow through the windows, contrasting with the deep charcoal exterior finish. The image conveys a sense of high-end quality and modern architectural innovation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1Z-3AJ-4opXUlmB_Y6Z1MsNjpOm4n7cFh-6qgPER93vkwR4Ay1tMaZGEI6dOsxl6rN63Ph0YGKlTV5O7BJvsAXLYrtRxpqCmvqFHMkg5Oc76wsdKqE5cYbMeJaCGNvBX9Vl3hCmxhIt70qGLKubQ-PKeLO0Mk9e6hGRvk_WnAdq0eh1c2uB1lT5vHBOZroMX3bOwlyN3-zsCnqR9LXzvMhS7zJs-MxQfs1HXfPBI5cZ1yDYvcSwq9pzdvm2_gGXnijx1R2evzk2E">
+<div class="absolute top-4 left-4">
+<span class="bg-primary text-white font-label-caps text-[10px] px-3 py-1 rounded-sm uppercase">Disponible</span>
+</div>
+</div>
+<div class="p-8">
+<span class="text-accent-terracotta font-label-caps text-label-caps mb-2 block">VALPARAÍSO</span>
+<h3 class="font-headline-md text-headline-md mb-4 text-primary">Hacienda Los Robles</h3>
+<p class="text-on-surface-variant font-body-md mb-6">Iluminacion, remodelacion, pintura, estucos, cielo, pisos, terminacion&nbsp;</p>
+<button class="w-full py-4 border border-primary text-primary font-bold hover:bg-primary hover:text-white transition-all">Ver más detalles</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Choose Us -->
+<section class="py-section-gap-mobile md:py-section-gap-desktop bg-surface" id="nosotros">
+<div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop text-center">
+<h2 class="font-headline-lg text-headline-lg mb-16 text-primary max-w-3xl mx-auto">¿Por qué elegir Construcciones Luis Sepúlveda Rejano E.I.R.L?</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-left">
+<div class="space-y-4">
+<div class="w-12 h-12 flex items-center justify-center bg-tertiary-fixed text-primary rounded-sm">
+<span class="material-symbols-outlined" data-icon="verified">verified</span>
+</div>
+<h4 class="font-headline-md text-headline-md">Calidad Certificada</h4>
+<p class="text-on-surface-variant">Cumplimos con los más altos estándares constructivos de la industria chilena.</p>
+</div>
+<div class="space-y-4">
+<div class="w-12 h-12 flex items-center justify-center bg-tertiary-fixed text-primary rounded-sm">
+<span class="material-symbols-outlined" data-icon="support_agent">support_agent</span>
+</div>
+<h4 class="font-headline-md text-headline-md">Asesoría Sin Costo</h4>
+<p class="text-on-surface-variant">Te acompañamos en cada paso del proceso, desde la idea hasta la llave en mano.</p>
+</div>
+<div class="space-y-4">
+<div class="w-12 h-12 flex items-center justify-center bg-tertiary-fixed text-primary rounded-sm">
+<span class="material-symbols-outlined" data-icon="architecture">architecture</span>
+</div>
+<h4 class="font-headline-md text-headline-md">Apoyo en Diseño</h4>
+<p class="text-on-surface-variant">Arquitectos expertos que adaptan cada espacio a tu estilo de vida.</p>
+</div>
+<div class="space-y-4">
+<div class="w-12 h-12 flex items-center justify-center bg-tertiary-fixed text-primary rounded-sm">
+<span class="material-symbols-outlined" data-icon="task_alt">task_alt</span>
+</div>
+<h4 class="font-headline-md text-headline-md">Entrega Garantizada</h4>
+<p class="text-on-surface-variant">Respetamos los plazos acordados bajo contrato. Tu tiempo es nuestra prioridad.</p>
+</div>
+<div class="space-y-4">
+<div class="w-12 h-12 flex items-center justify-center bg-tertiary-fixed text-primary rounded-sm">
+<span class="material-symbols-outlined" data-icon="home_repair_service">home_repair_service</span>
+</div>
+<h4 class="font-headline-md text-headline-md">Servicio Post-venta</h4>
+<p class="text-on-surface-variant">Estamos presentes incluso después de entregada la propiedad.</p>
+</div>
+<div class="space-y-4">
+<div class="w-12 h-12 flex items-center justify-center bg-tertiary-fixed text-primary rounded-sm">
+<span class="material-symbols-outlined" data-icon="construction">construction</span>
+</div>
+<h4 class="font-headline-md text-headline-md">Materiales Premium</h4>
+<p class="text-on-surface-variant">Solo utilizamos insumos de primera categoría para asegurar durabilidad.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Quoting Process -->
+<section class="py-section-gap-mobile md:py-section-gap-desktop bg-inverse-surface text-inverse-on-surface overflow-hidden" id="proceso">
+<div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop">
+<h2 class="font-headline-lg text-headline-lg mb-20 text-center">Cambiar tu casa es más fácil de lo que crees</h2>
+<div class="relative">
+<!-- Line -->
+<div class="hidden md:block absolute top-10 left-0 w-full h-px bg-outline-variant/30"></div>
+<div class="grid grid-cols-1 md:grid-cols-5 gap-10 relative z-10">
+<div class="text-center group">
+<div class="w-20 h-20 bg-accent-terracotta rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold group-hover:scale-110 transition-transform">1</div>
+<h5 class="font-headline-md text-body-lg font-bold mb-2">Describe tu proyecto</h5>
+<p class="text-sm opacity-70">Cuéntanos tus necesidades.</p>
+</div>
+<div class="text-center group">
+<div class="w-20 h-20 bg-white/10 border border-white/20 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold group-hover:scale-110 transition-transform">2</div>
+<h5 class="font-headline-md text-body-lg font-bold mb-2">Reserva</h5>
+<p class="text-sm opacity-70">Asegura tu cupo de construcción.</p>
+</div>
+<div class="text-center group">
+<div class="w-20 h-20 bg-white/10 border border-white/20 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold group-hover:scale-110 transition-transform">3</div>
+<h5 class="font-headline-md text-body-lg font-bold mb-2">Tramita tu cotización</h5>
+<p class="text-sm opacity-70">Evaluamos costos y materiales.</p>
+</div>
+<div class="text-center group">
+<div class="w-20 h-20 bg-white/10 border border-white/20 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold group-hover:scale-110 transition-transform">4</div>
+<h5 class="font-headline-md text-body-lg font-bold mb-2">Firma y escritura</h5>
+<p class="text-sm opacity-70">Legalizamos los acuerdos.</p>
+</div>
+<div class="text-center group">
+<div class="w-20 h-20 bg-white/10 border border-white/20 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold group-hover:scale-110 transition-transform">5</div>
+<h5 class="font-headline-md text-body-lg font-bold mb-2">¡Recibe tu presupuesto!</h5>
+<p class="text-sm opacity-70">Todo listo para empezar.</p>
+</div>
+</div>
+</div>
+<div class="mt-20 text-center">
+<button class="bg-accent-terracotta text-white px-12 py-5 font-bold rounded-lg hover:scale-105 transition-transform shadow-2xl">
+                    Empieza hoy, es gratis
+                </button>
+</div>
+</div>
+</section>
+<!-- Gallery (Bento Layout) -->
+<section class="py-section-gap-mobile md:py-section-gap-desktop bg-surface-container">
+<div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg mb-4 text-primary">Nuestro Trabajo en Detalle</h2>
+<p class="text-on-surface-variant max-w-2xl mx-auto">Visualiza la precisión técnica y el diseño estético de nuestras obras terminadas.</p>
+</div>
+<div class="bento-grid">
+<div class="bento-item-large overflow-hidden rounded-sm relative group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A wide angle photograph of a modern open-plan kitchen and dining area featuring charcoal cabinetry and white marble countertops. The architecture showcases the 'solid foundation' style with clean horizontal lines and premium lighting fixtures. The mood is sophisticated and residential, highlighting luxury materials and architectural precision." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDA9PCaXQW-HRyaJj1QOVKHkDrqNqxKk7l_mnm2reszDoX3tMEskW7JlD3TzRF7_CaFVKVWrN9LcajAZHwD31-zVLBQOY4C1s85pcMBlxm54BZIYiLQBlmNe1oYfSyO_bWEtjBR2P6onQuf4MpbXsTwlFnG4S2wsl4X7qWhKxhqz4mnxoCOJMkyfz8EgaUoviAW1cDuv3pzQBaxNR37S77hz9RMSKyXvqD9qr9i-d3gPghusW_JWq6G73tM7oxyrQ2bBKH5K-t9lJQ">
+</div>
+<div class="bento-item-tall overflow-hidden rounded-sm relative group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A vertical shot showing the architectural detail of a staircase made of concrete and dark wood. The design is minimalist and strong, representing engineering expertise. Natural light falls through a skylight, creating deep contrasts. The overall aesthetic is one of permanence and modern luxury." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3cOKA82yo_zWIO6Zo5lS42faqj22K8LkAbtWLYZWk1e0O4wl-SShfPIvioHzOXel_3PWnHoUM3d1Bk68t9uABziiOaDz_nb_8_EJn0gYzmAE2V3c9bgbMCiKEceTztMqODL2GEsWsTqc5koWYihRaJ_pBf2Bk27vK8s-MewUtWZCk0hieKUo1_MpJGeotJD4lLh3v8ZjgLejyJ-8dgn7db_wW4yCW6r5PNE9TmNols597XKYMRzqJ_StEXvOXdQsORFdSO3Wlo7A">
+</div>
+<div class="overflow-hidden rounded-sm relative group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Modern architectural detail of an exterior window framed in dark metal against a white textured wall. The design is crisp and clean, reflecting the modern real estate market in Chile. High-key lighting emphasizes the textures of the materials." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkxDsi0SfQotagbkRf1hTM3_X9TlN7XaxPv9zs_M6Uc5Vom-dmcrNjYQOENnLLxolUjNNZZQVtQauq3x87eGG9ucmsm1OKx1yXq_dVAmOjSID9GjdwrbbQNtQaJvfOG8pzcsUWMJ1s8sFZIIveth55CSOjmYPtRhEG_PO8-q80ZAqyacrEC15ZdP1SLqcwT7qoH3_p1nzKyIhEjj0o0i1pQT2xfIUaJWPSTQj0qi7KGt6hv-9emS_3IwpCCUQ6WxiitmVF1arpr6k">
+</div>
+<div class="bento-item-wide overflow-hidden rounded-sm relative group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A luxurious modern bedroom with a large terrace overlooking a coastal landscape. The room is styled with premium neutral tones and high-quality finishes. The atmosphere is calm and expansive, representing the lifestyle promised by Luis Sepúlveda Rejano constructions." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgAueNd7cVFxSFcLjpB_yjAECSvZBo20u9wvVnkRIQBW0zB0x9APMTfzwWgd4hfyNgfzgCfVFnVgOi58O89eOAOQarlzg--r3bDbF_abeOmUkuo1ZFvJByuSxwek8NzOy6BO_n2ORPpwMZC1vV0mv-D-RQN7oyZ3OTfWAtBUscMCJ_fb6XywBOJDuTketU2Sq0uCPcRJFWQ4fGa6ZnWXcRIjIM2nR9ov0TiSW7sP6bxF1_BT-WFuhOjins8WpchIbkmv-uBE9_f_s">
+</div>
+<div class="overflow-hidden rounded-sm relative group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Detail of high-end bathroom finishes including a floating charcoal vanity and soft gold faucets. The walls are large-format off-white porcelain. The lighting is soft and flattering, emphasizing a premium residential feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMPfcf1AC3GtVNVxXD0WwARjFhENAcOKlLPzM4rFdKFrmuJNCX4lczAGrwDSqfIJK8_vSTklATtdwDiB4aWofG_4QKljERm5uBzmb3Rt-7ot8PXTI8Jwy0wfXHt-_p94myHC_zu9FPJYimf4leIS1XA2QvQxw0h0vTwZnf9Hp_OKIR2lVpBNhvyAlZwP289JAlmmWSgQ9g8ofo9KJgrBBYAXBwrGq2tvpwLpcz158Wd7Qqk2OIVe7MWO8IgNrzUCBTMYDxob7ooNU">
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-section-gap-mobile md:py-section-gap-desktop bg-surface" id="testimonios">
+<div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop">
+<h2 class="font-headline-lg text-headline-lg text-center mb-16">Lo que dicen nuestros clientes</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="p-8 border border-outline-variant/30 bg-surface-container-lowest shadow-sm hover:shadow-md transition-all">
+<div class="flex text-secondary mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+</div>
+<p class="font-body-md text-on-surface-variant italic mb-6">"La calidad de construcción es insuperable. El equipo de Luis Sepúlveda cumplió con cada detalle prometido y entregaron mi casa en Valparaíso antes de lo esperado."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-tertiary-fixed overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Portrait of a satisfied customer, a professional woman in her 40s, smiling warmly in a bright, modern indoor setting. High-key lighting and soft background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKlVkjFlNje6vQ80UuK49ka2JjJ9roxm5JqoJgVNUAKwmN5a3FtkRbCN5cSZxI3EfVZ6KxD9-tSu6SQjyk92UVsjzkkn38_ua1A2M24fdaYvzPcKt83VI4Sz_Ikj_WZM17qBKjQG4L5qKeHrsVHGu9z9FnsspojybsrY1EGPzi0zCbLOiYSVuY7PzNdbsRPtuv8g-X9CUpU_mS37a0ESf7UwlKSgEnIUyEFwZN-GkOEcmfJpa9Ga3TpSnwZm25IU5gxAsPSOZQsO8">
+</div>
+<div>
+<p class="font-bold text-primary">María Elena G.</p>
+<p class="text-xs text-on-surface-variant uppercase font-label-caps">Propietaria</p>
+</div>
+</div>
+</div>
+<div class="p-8 border border-outline-variant/30 bg-surface-container-lowest shadow-sm hover:shadow-md transition-all">
+<div class="flex text-secondary mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+</div>
+<p class="font-body-md text-on-surface-variant italic mb-6">"Increíble asesoría desde el primer día. Nos ayudaron a financiar nuestro sueño y hoy disfrutamos de una propiedad con terminaciones de lujo. 100% recomendados."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-tertiary-fixed overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Portrait of a happy homeowner, a man in his 50s, standing in a bright and elegant architectural space. The lighting is warm and clean." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTenfhd37b5lvPYQ9MxSuPWMl4FvUOt5yKnNpnHHdFhOuSBpyIbfvgrb8L27xH6yMkjJ9vXaouyY88VNXPQsXCZjBnBGbm0ja1Sm-IZvKmH3af2xrVKkt3Yg-3IVcjxNt2JJ3PkDHT4_dSCrpRNvRDnR_8wigTfmOM9pcCaIsHTSYnXdgrx_QZyScOppwGv0_JC1UyJ_2kM4Rwb-T7DV5oAAXzTuyo9ehL3tLwzj1Yy6tA0ImwhOETjjopIVg3GgNYTR_X_PdKDDc">
+</div>
+<div>
+<p class="font-bold text-primary">Rodrigo Valdés</p>
+<p class="text-xs text-on-surface-variant uppercase font-label-caps">Empresario</p>
+</div>
+</div>
+</div>
+<div class="p-8 border border-outline-variant/30 bg-surface-container-lowest shadow-sm hover:shadow-md transition-all">
+<div class="flex text-secondary mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+</div>
+<p class="font-body-md text-on-surface-variant italic mb-6">"Lo mejor es la post-venta. Tuvimos una duda técnica meses después de la entrega y el servicio fue inmediato. Se nota el compromiso con el cliente."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-tertiary-fixed overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Close-up portrait of a satisfied client smiling, set against a soft bokeh architectural background. Professional studio lighting style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcrk953sdyCQaTqn-489o3ZUnWiUyAyvEuVetM2XXQ4ZoIuHhdtgEhp8CMoFzxk8B0bHQPa0w4YBcO2jNjzAkwYQpyWRyXJSMa6WqQLIZHGIBt_HeXzu7iHQIN2VOBuvQ5dwYQZ5MEQqzspPtIDoNLO7MeA_4VxbIDKTbCBb2jS1efqKHC6-Uy5B2spocV-MUyZO5ry6JRI_HUpB0nNLqPje9G9JUqdWUi8_OtxlfixcCzYkeWdmVA3ZvCPfXa_Lh7dHqkfJvqWSo">
+</div>
+<div>
+<p class="font-bold text-primary">Andrés Figueroa</p>
+<p class="text-xs text-on-surface-variant uppercase font-label-caps">Arquitecto</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Form Section -->
+<section class="py-section-gap-mobile md:py-section-gap-desktop bg-accent-terracotta text-white overflow-hidden" id="contacto">
+<div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+<div>
+<h2 class="font-headline-lg text-headline-lg mb-8 leading-tight">¿Listo para remodelar tu hogar o construir desde cero?</h2>
+<p class="font-body-lg text-body-lg opacity-90 mb-10">Agenda una reunión hoy mismo con nuestros especialistas. Construimos la base de tu futuro con la solidez de nuestra trayectoria.</p>
+<div class="space-y-6">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined">call</span>
+<span class="">+56 9 1234 5678</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined">mail</span>
+<span class="">contacto@luissepulveda.cl</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined">location_on</span>
+<span class="">Av. Libertad 1234, Viña del Mar, Chile</span>
+</div>
+</div>
+</div>
+<div class="bg-white p-10 rounded-sm shadow-2xl text-primary">
+<form class="space-y-6">
+<div>
+<label class="block font-label-caps text-label-caps mb-2 text-primary/60">Nombre</label>
+<input class="w-full border-0 border-b border-outline-variant focus:border-primary focus:ring-0 px-0 py-3 transition-all" placeholder="Escribe tu nombre completo" type="text">
+</div>
+<div>
+<label class="block font-label-caps text-label-caps mb-2 text-primary/60">Teléfono</label>
+<input class="w-full border-0 border-b border-outline-variant focus:border-primary focus:ring-0 px-0 py-3 transition-all" placeholder="+56 9 ..." type="tel">
+</div>
+<div>
+<label class="block font-label-caps text-label-caps mb-2 text-primary/60">Correo</label>
+<input class="w-full border-0 border-b border-outline-variant focus:border-primary focus:ring-0 px-0 py-3 transition-all" placeholder="tucorreo@ejemplo.com" type="email">
+</div>
+<div>
+<label class="block font-label-caps text-label-caps mb-2 text-primary/60">Proyecto de interés</label>
+<select class="w-full border-0 border-b border-outline-variant focus:border-primary focus:ring-0 px-0 py-3 transition-all">
+<option>Construcción desde cero</option>
+<option>Remodelación Integral</option>
+<option>Compra de Proyecto</option>
+<option>Otro</option>
+</select>
+</div>
+<button class="w-full bg-primary text-white py-5 font-bold uppercase tracking-widest hover:bg-primary-container transition-all">Quiero que me contacten</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer (Shared Component) -->
+<footer class="w-full pt-section-gap-mobile pb-8 md:pt-section-gap-desktop bg-inverse-surface text-inverse-on-surface">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto">
+<div class="md:col-span-5 space-y-8">
+<div class="text-headline-md font-headline-md font-bold text-white">Luis Sepúlveda Rejano</div>
+<p class="max-w-md opacity-70">Empresa líder en construcción y desarrollo inmobiliario en la región de Valparaíso. Nuestra misión es construir hogares que trasciendan generaciones a través de la excelencia arquitectónica.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 border border-white/20 flex items-center justify-center hover:bg-white hover:text-primary transition-all" href="#">FB</a>
+<a class="w-10 h-10 border border-white/20 flex items-center justify-center hover:bg-white hover:text-primary transition-all" href="#">IG</a>
+<a class="w-10 h-10 border border-white/20 flex items-center justify-center hover:bg-white hover:text-primary transition-all" href="#">IN</a>
+</div>
+</div>
+<div class="md:col-span-2 space-y-4">
+<h6 class="font-bold text-white">Enlaces</h6>
+<nav class="flex flex-col gap-3">
+<a class="text-surface-variant/80 hover:text-white transition-colors hover:underline decoration-secondary-fixed underline-offset-4" href="#">Proyectos</a>
+<a class="text-surface-variant/80 hover:text-white transition-colors hover:underline decoration-secondary-fixed underline-offset-4" href="#">Nosotros</a>
+<a class="text-surface-variant/80 hover:text-white transition-colors hover:underline decoration-secondary-fixed underline-offset-4" href="#">Proceso</a>
+<a class="text-surface-variant/80 hover:text-white transition-colors hover:underline decoration-secondary-fixed underline-offset-4" href="#">Testimonios</a>
+</nav>
+</div>
+<div class="md:col-span-2 space-y-4">
+<h6 class="font-bold text-white">Legal</h6>
+<nav class="flex flex-col gap-3">
+<a class="text-surface-variant/80 hover:text-white transition-colors hover:underline decoration-secondary-fixed underline-offset-4" href="#">Aviso Legal</a>
+<a class="text-surface-variant/80 hover:text-white transition-colors hover:underline decoration-secondary-fixed underline-offset-4" href="#">Privacidad</a>
+<a class="text-surface-variant/80 hover:text-white transition-colors hover:underline decoration-secondary-fixed underline-offset-4" href="#">Cookies</a>
+</nav>
+</div>
+<div class="md:col-span-3">
+<h6 class="font-bold text-white mb-4">Ubicación</h6>
+<div class="w-full h-48 bg-surface-container-highest rounded-sm overflow-hidden border border-white/10 grayscale">
+<img class="w-full h-full object-cover" data-alt="A stylized minimalist map of Valparaíso, Chile, emphasizing urban grids and coastal geography. The design is clean with a monochromatic charcoal and grey color scheme to match the corporate identity." data-location="Valparaiso, Chile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWDRMKx7mS-L0x1oErAvreAQMHkfAlEJd4n3dD01PKKEch_zkA6wXjKH0rdD9R11ZrA61mcd7JHAr0Xc35ZR9Ey0QTC5xrFekfHaQbUS5JoWW4V0uoe-WkMCo2ejnAzqAhTk0C3oDDH_b2vyHfBolatn3rFo5GejV7Pml50-03dQ9H4AbS4uy-g1O1PDfsrgJqBj_CtbCl6g5Cs1H-iggB6E2jRkG-0lh3UzkLfVnhrdJybZ8ISJzNvymHuEZZmxG6sa3fAOndVtQ">
+</div>
+</div>
+<div class="col-span-full pt-12 mt-12 border-t border-white/10 text-center opacity-60 text-sm">
+                © 2024 Construcciones Luis Sepúlveda Rejano E.I.R.L. Todos los derechos reservados.
+            </div>
+</div>
+</footer>
+<!-- WhatsApp Floating Button -->
+<a class="fixed bottom-8 right-8 w-16 h-16 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-2xl z-[100] hover:scale-110 active:scale-95 transition-all" href="#">
+<svg class="w-10 h-10 fill-current" viewBox="0 0 24 24">
+<path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.187-2.59-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.748-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217s.231.001.332.005c.109.004.258-.041.404.311.144.346.491 1.197.535 1.284.044.087.073.188.014.303-.058.116-.087.188-.173.289l-.26.303c-.087.087-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.144.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"></path>
+</svg>
+</a>
+
+
+</body></html>

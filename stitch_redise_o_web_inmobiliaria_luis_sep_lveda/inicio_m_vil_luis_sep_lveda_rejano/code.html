@@ -1,0 +1,409 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="es"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Metropolis:wght@400;500;600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        h1, h2, h3, .font-metropolis {
+            font-family: 'metropolis', sans-serif;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed": "#e6e2de",
+                        "tertiary-fixed-dim": "#cac6c2",
+                        "primary-container": "#1b1b1c",
+                        "on-primary-fixed": "#1b1b1c",
+                        "surface-tint": "#5f5e5f",
+                        "on-surface-variant": "#46474a",
+                        "on-secondary": "#ffffff",
+                        "secondary-fixed": "#ffe088",
+                        "secondary": "#735c00",
+                        "surface-container-highest": "#e5e2e1",
+                        "surface-container": "#f1edec",
+                        "on-secondary-fixed": "#241a00",
+                        "surface-container-high": "#ebe7e7",
+                        "secondary-container": "#fed65b",
+                        "on-primary-fixed-variant": "#474647",
+                        "surface": "#fdf8f8",
+                        "surface-bright": "#fdf8f8",
+                        "tertiary-container": "#1c1b19",
+                        "on-error": "#ffffff",
+                        "inverse-primary": "#c8c6c7",
+                        "surface-variant": "#e5e2e1",
+                        "on-tertiary": "#ffffff",
+                        "inverse-surface": "#313030",
+                        "inverse-on-surface": "#f4f0ef",
+                        "on-primary-container": "#858384",
+                        "primary-fixed": "#e5e2e3",
+                        "secondary-fixed-dim": "#e9c349",
+                        "primary": "#000000",
+                        "on-error-container": "#93000a",
+                        "on-primary": "#ffffff",
+                        "surface-dim": "#ddd9d9",
+                        "on-surface": "#1c1b1b",
+                        "error": "#ba1a1a",
+                        "on-tertiary-fixed": "#1c1b19",
+                        "on-background": "#1c1b1b",
+                        "outline": "#76777b",
+                        "on-secondary-fixed-variant": "#574500",
+                        "outline-variant": "#c7c6ca",
+                        "surface-container-low": "#f7f3f2",
+                        "on-secondary-container": "#745c00",
+                        "primary-fixed-dim": "#c8c6c7",
+                        "on-tertiary-container": "#868380",
+                        "tertiary": "#000000",
+                        "on-tertiary-fixed-variant": "#484644",
+                        "background": "#fdf8f8",
+                        "surface-container-lowest": "#ffffff",
+                        "error-container": "#ffdad6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "grid-columns": "12",
+                        "margin-desktop": "80px",
+                        "section-gap-mobile": "64px",
+                        "gutter": "24px",
+                        "base": "8px",
+                        "section-gap-desktop": "120px",
+                        "margin-mobile": "20px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["metropolis"],
+                        "label-caps": ["metropolis"],
+                        "headline-lg": ["metropolis"],
+                        "display-lg": ["metropolis"],
+                        "body-lg": ["inter"],
+                        "headline-md": ["metropolis"],
+                        "body-md": ["inter"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                        "headline-lg": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface">
+<!-- Sticky Header -->
+<nav class="sticky top-0 w-full z-50 bg-surface/95 backdrop-blur-md border-b border-outline-variant/30 shadow-sm">
+<div class="flex justify-between items-center w-full px-margin-mobile py-4 max-w-[1440px] mx-auto">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-2xl">menu</span>
+<span class="text-headline-md font-headline-md font-bold tracking-tight text-primary">LSR</span>
+</div>
+<button class="bg-primary text-on-primary px-5 py-2.5 rounded-DEFAULT font-body-md font-bold active:scale-95 transition-transform">
+                Cotiza ahora
+            </button>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative h-[795px] min-h-[600px] flex items-center justify-center text-center px-margin-mobile overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-black/50 z-10"></div>
+<img class="w-full h-full object-cover" data-alt="A wide-angle professional architectural photograph of a luxury modern construction site at dusk. The scene features clean lines, high-contrast structural elements, and a sophisticated lighting scheme that highlights the quality of the building materials. The color palette is dominated by deep charcoals and warm ambers, reflecting a premium real estate brand identity. The atmosphere is one of prestigious growth and architectural precision in a high-end urban setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeDPlwMNiT3I7WTHHiq-KGHmcA8XvAQTYJX8F4c3JvxEJ8KFr1sfjs_C_RvTuhSdXT8JdfCXL9rhpFkxkMvsEQkAWMnwTW2CMP0nt_LQ2loweWn-uD7ZMIalRZnsG_oWiU8Sa9pmWgmocC_D8XIk73Gh0Q5huBpJPVrckxeD81Y7ALutc1IqfdmdNcn7DmnUSYVAksgOB5A4vWTbdfwrXc1963Yszw429rnYoL3v_y6QAH61az8BiNBhP029f9qFRvkxHFfdpCDTc">
+</div>
+<div class="relative z-20 max-w-sm">
+<h1 class="text-headline-lg-mobile font-headline-lg-mobile text-white mb-6">Construimos el futuro de su inversión</h1>
+<p class="text-body-lg text-white/90 mb-8 px-4">Excelencia en ingeniería y arquitectura para proyectos residenciales y comerciales de alto estándar.</p>
+<div class="flex flex-col gap-4">
+<button class="bg-[#C05746] text-white py-4 px-8 rounded-DEFAULT font-bold shadow-lg active:scale-95 transition-all">Ver Proyectos</button>
+<button class="border-2 border-white text-white py-4 px-8 rounded-DEFAULT font-bold active:scale-95 transition-all">Contáctanos</button>
+</div>
+</div>
+</section>
+<!-- Trust Bar -->
+<section class="bg-surface-container py-12 px-margin-mobile">
+<div class="grid grid-cols-2 gap-8 text-center">
+<div class="flex flex-col items-center">
+<span class="text-headline-lg font-bold text-primary">15+</span>
+<span class="text-label-caps text-on-surface-variant uppercase mt-2">Años de Trayectoria</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="text-headline-lg font-bold text-primary">200+</span>
+<span class="text-label-caps text-on-surface-variant uppercase mt-2">Proyectos Listos</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="text-headline-lg font-bold text-primary">100%</span>
+<span class="text-label-caps text-on-surface-variant uppercase mt-2">Cumplimiento</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="text-headline-lg font-bold text-primary">12</span>
+<span class="text-label-caps text-on-surface-variant uppercase mt-2">Certificaciones</span>
+</div>
+</div>
+</section>
+<!-- Projects Section -->
+<section class="py-section-gap-mobile px-margin-mobile">
+<div class="mb-10 text-center">
+<span class="text-label-caps text-primary tracking-widest uppercase">Portafolio</span>
+<h2 class="text-headline-lg-mobile font-headline-lg-mobile mt-2">Proyectos Destacados</h2>
+</div>
+<div class="flex flex-col gap-10">
+<!-- Project Card -->
+<div class="bg-surface-container-lowest overflow-hidden shadow-sm">
+<div class="relative h-64">
+<img class="w-full h-full object-cover" data-alt="A close-up architectural shot of a minimalist luxury villa facade. The building features large floor-to-ceiling glass panels and smooth concrete finishes in off-white and charcoal. The lighting is bright daylight, creating sharp shadows that emphasize the architectural precision. The overall aesthetic is clean, sophisticated, and modern, representing the high-end residential construction standards of a prestigious real estate company." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqXuy4JeC7FXZv21GI1Tl1Vxj-iGkNGAboUPdYjS-JE82WcxJkrEg3Knuzm2zAg_cMvd8Y01gMR4P5txQRkKjFkWsPuIuwMTasXK2LcWGPdYmpNh4Mjdh0xOEYA6OpEzIelZ1mdKBy-pQLqPU-Mlfm3r7ZerkKUYVAO42vmfBfvisycehN4Ru9ZfNvtPCnQeUasYhUPIudCtnVsgMyNh8jqnj3v_jXdqjFsKYZAfRhp5ufZcXbwlgjwEz8HVK-x5a6eOKiGVMZxjE">
+<span class="absolute top-4 left-4 bg-primary text-white text-label-caps px-3 py-1">EN VENTA</span>
+</div>
+<div class="p-6">
+<h3 class="text-headline-md font-headline-md mb-2">Residencial Las Acacias</h3>
+<p class="text-body-md text-on-surface-variant mb-4">Ubicación privilegiada con acabados de lujo y eficiencia energética.</p>
+<div class="flex gap-4 text-on-surface-variant border-t border-outline-variant/30 pt-4">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">square_foot</span>
+<span class="text-label-caps">240m²</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">location_on</span>
+<span class="text-label-caps">Santiago, CL</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Project Card 2 -->
+<div class="bg-surface-container-lowest overflow-hidden shadow-sm">
+<div class="relative h-64">
+<img class="w-full h-full object-cover" data-alt="A modern commercial office building with a striking glass and steel structure. The photograph is taken from a low angle looking up, highlighting the towering presence and architectural complexity. The reflection of the sky on the glass panels creates a dynamic play of blue and white, while the steel frame is a deep charcoal. This visual illustrates professional engineering and large-scale urban development projects." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2oKDwyLhskbMnHNDgRUeKX-wwYnykIs1Yb12JzQK1Z1BhP1_MbmkrVXoZqQiuJrrSEwmk8yYH959TdpZOsMNUybGoCsoEqRVYisl9uYEDfuWm9aYYhyLgjN78DB-IQFQI7BSydqM1jHnLWu5o4DefolQhoQjNXhuDg9MrM6Doc5Ovni2GJhCrsQvCMlge2SIzcXxSzqvJzH50aZbstzKyYtkUCnK3Ne36xKsBk4tVqEN5hazrJjCTM9En8PXjwprt4sj4axONH9Y">
+<span class="absolute top-4 left-4 bg-[#735c00] text-white text-label-caps px-3 py-1">ENTREGADO</span>
+</div>
+<div class="p-6">
+<h3 class="text-headline-md font-headline-md mb-2">Edificio Corporativo Central</h3>
+<p class="text-body-md text-on-surface-variant mb-4">Diseño contemporáneo para espacios de trabajo de alto rendimiento.</p>
+<div class="flex gap-4 text-on-surface-variant border-t border-outline-variant/30 pt-4">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">square_foot</span>
+<span class="text-label-caps">1.200m²</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">location_on</span>
+<span class="text-label-caps">Concepción, CL</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Choose Us -->
+<section class="bg-inverse-surface py-section-gap-mobile px-margin-mobile text-inverse-on-surface">
+<div class="mb-12">
+<span class="text-label-caps text-secondary-fixed tracking-widest uppercase">Diferenciadores</span>
+<h2 class="text-headline-lg-mobile font-headline-lg-mobile mt-2">¿Por qué elegirnos?</h2>
+</div>
+<div class="grid grid-cols-1 gap-10">
+<div class="flex gap-4">
+<div class="text-[#e9c349]">
+<span class="material-symbols-outlined text-4xl">verified</span>
+</div>
+<div>
+<h3 class="text-headline-md mb-2">Garantía Estructural</h3>
+<p class="text-surface-variant/80 text-body-md">Sólida base técnica respaldada por certificaciones internacionales y años de experiencia.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="text-[#e9c349]">
+<span class="material-symbols-outlined text-4xl">timer</span>
+</div>
+<div>
+<h3 class="text-headline-md mb-2">Entrega a Tiempo</h3>
+<p class="text-surface-variant/80 text-body-md">Gestión de proyectos optimizada para cumplir estrictamente con los plazos acordados.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="text-[#e9c349]">
+<span class="material-symbols-outlined text-4xl">handyman</span>
+</div>
+<div>
+<h3 class="text-headline-md mb-2">Materiales Premium</h3>
+<p class="text-surface-variant/80 text-body-md">Selección rigurosa de proveedores y materiales de la más alta calidad para su inversión.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Quoting Process -->
+<section class="py-section-gap-mobile px-margin-mobile">
+<div class="mb-12 text-center">
+<h2 class="text-headline-lg-mobile font-headline-lg-mobile">Proceso de Presupuesto</h2>
+</div>
+<div class="relative space-y-12">
+<div class="absolute left-6 top-4 bottom-4 w-px bg-outline-variant/50 z-0"></div>
+<div class="relative z-10 flex gap-6">
+<div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold flex-shrink-0">1</div>
+<div>
+<h3 class="font-bold text-headline-md mb-1">Contacto Inicial</h3>
+<p class="text-body-md text-on-surface-variant">Agendamos una reunión para conocer sus necesidades y presupuesto.</p>
+</div>
+</div>
+<div class="relative z-10 flex gap-6">
+<div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold flex-shrink-0">2</div>
+<div>
+<h3 class="font-bold text-headline-md mb-1">Presupuesto Detallado</h3>
+<p class="text-body-md text-on-surface-variant">Entrega de cotización técnica con desglose completo de partidas.</p>
+</div>
+</div>
+<div class="relative z-10 flex gap-6">
+<div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold flex-shrink-0">3</div>
+<div>
+<h3 class="font-bold text-headline-md mb-1">Contrato y Diseño</h3>
+<p class="text-body-md text-on-surface-variant">Firma de documentos y refinamiento de planos arquitectónicos.</p>
+</div>
+</div>
+<div class="relative z-10 flex gap-6">
+<div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold flex-shrink-0">4</div>
+<div>
+<h3 class="font-bold text-headline-md mb-1">Ejecución y Entrega</h3>
+<p class="text-body-md text-on-surface-variant">Construcción bajo supervisión experta hasta la entrega de llaves.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Gallery (Compact Grid) -->
+<section class="bg-surface-container py-section-gap-mobile px-margin-mobile">
+<h2 class="text-headline-lg-mobile font-headline-lg-mobile mb-8 text-center">Galería de Obra</h2>
+<div class="grid grid-cols-2 gap-4">
+<img class="aspect-square object-cover w-full" data-alt="A detailed architectural photo showing high-end construction materials like polished concrete, structural steel, and warm wooden accents in a contemporary residential interior. The lighting is soft and directional, highlighting the textures of the craftsmanship. The composition emphasizes architectural precision and the high-quality finish of a luxury project, maintaining a sophisticated and modern visual style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPVOl2OwKPqhUV1JDEd1Hgl4-k999IpIt9tN1R9MP54Doj7DdAs8JBfANsu6QKuHOp4N63JoHFGTFLp8lJhGenBpf7RLNyDYdfrkHCpNlWZlGVZOowAQCylh3hmOlTT26okyTXhyXCr8CjEPbiwYBUmTaW1yvv_EELd83BCQPZhlHR6jz1OvwlCle5gTkt10ZPkdkItXYJ-vf_2mGBLplUC3ZFnUuAqPUWq0QA6JiLMVJLVNYCwshpvUDWD97ipZSb44pv9okfM54">
+<img class="aspect-square object-cover w-full" data-alt="A clean, professional photograph of a modern construction worker using advanced surveying equipment on a bright, sunny job site. The background shows the skeletal structure of a sophisticated building project against a clear sky. The image reflects precision, professionalism, and the high-tech approach of a leading engineering firm, utilizing a high-key lighting style and a professional color palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFSzrXmI087YDXrjlgjHdeuIMSLI_3ofyCMEHmHaaRJ8sdxpu5-cX3xYdaBYC2r7U4JchHkqiHzdaFwK7kgA8hZix6RxiBBYfwKvZE1QKv80gorbiohIwZAErpgWw8MhZyGs5TjkZdjO8CyJ-cfRR01IMFZYL62ybBVImdf4THl08kP0XPM-W4DuOjdXKQK_5adwOImxc3nM9bE43T2JosnAmJwD4F663VSJFobu648zoENjlNynhYhdMfFJOzyTaILwJda9Nonj8">
+<img class="aspect-square object-cover w-full" data-alt="An interior shot of a minimalist, high-ceilinged lobby with massive glass walls and smooth limestone floors. The lighting is natural and expansive, creating a serene, prestigious atmosphere. Modern architectural features like hidden lighting and seamless transitions between surfaces are evident. This scene communicates the luxury and solid foundations promised by a high-end commercial construction project." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrZMqietHtKrquMTO8rc3pE9Ad172ocITrI15boBLFctpRTYL3LxjZQr5dkDVVzQFR_DGYwSon-9luXmlzsP8-szGjVi1TKf06urNefPUXZmVv6_LQF7f5GvTLWRaH_nfGZ7sEppuSIgprqBXC456kJJwW9pNMoDozS9E-6GqUXZ0qQLOvpb_zONqXqC3vgzU_TK8VBFtWvteGMhptY_VdDDwf8uy-m_7IkjfoqAZeIhdUutYgRzsbmMlVgtg54HYcUmwUJAPSsU8">
+<img class="aspect-square object-cover w-full" data-alt="A dusk photograph of a modern residential development featuring integrated landscaping and sophisticated exterior lighting. The buildings are silhouetted against a deep indigo sky, while warm glowing windows suggest comfort and high-end living. The clean architectural lines and contrast between the dark structures and soft light sources highlight the project's quality and modern aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBktqsbm9g3zvXGVmhduF4uKy_WEGRt8riYdKt0D1NYxdC6m9WqCTGmu6as9O-9sB6kIIoyhGk26pyDAhxQb4DG2I1lDe9_XML_4lvhhnKLFEuSkKeMPX5E8WnNeDMzwK6dwOUhACtNGf3qeoB7lRi336ZUS6MtopNcZ-sCQa9zFN-0ZkL5jwH383pKBnLTkv1h7JDMbMqB-1Cr_qDt7sos5zQd7TEFDWAjkXgn7WqD5ULNAKvRYB8wbnmfiCzjRopvlPJM8ewowcI">
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-section-gap-mobile px-margin-mobile overflow-hidden">
+<div class="mb-10 text-center">
+<span class="text-label-caps text-primary tracking-widest uppercase">Testimonios</span>
+<h2 class="text-headline-lg-mobile font-headline-lg-mobile mt-2">Lo que dicen nuestros clientes</h2>
+</div>
+<div class="bg-surface-container-low p-8 border-l-4 border-primary">
+<div class="flex text-[#e9c349] mb-4">
+<span class="material-symbols-outlined fill" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined fill" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined fill" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined fill" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined fill" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+</div>
+<p class="text-body-lg italic mb-6">"La seriedad y el compromiso con los plazos de LSR superaron todas nuestras expectativas. La calidad constructiva es impecable en cada detalle de nuestra nueva casa."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-outline-variant rounded-full overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A professional headshot of a middle-aged male executive in a clean, brightly lit modern office setting. He is wearing a sophisticated dark blazer and has a confident, satisfied expression. The background is softly blurred to keep focus on the subject. The image style is high-end corporate, with a clean and professional color palette that matches the luxury brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4mPkk6JLcQZGysdeHhSD6ZagwEnLYj3kObvDOhz2N-O3lRBTYclHjM-yZtvkwKa9l78yFxnFod7la8oJd_p_LZDEca7XtJnITNTY1ljBlHgfwZFtWOgiVvgNW9tCNZZMgDQ2Mau2RI1rzqu2VHD4JhGxdei6VpWmD_UeSQe_F71ffqdyz5YLOhdpR2Fzz1X63igLBO4A3EWd73K2Di74M1xlm_2m4A9Vo3tWMit4fTb-dsK38Upbi6l74xTe05Q146dmPasm5CLw">
+</div>
+<div>
+<p class="font-bold">Ricardo Valenzuela</p>
+<p class="text-label-caps text-on-surface-variant">Inversionista Inmobiliario</p>
+</div>
+</div>
+</div>
+<div class="flex justify-center gap-2 mt-6">
+<div class="w-2 h-2 rounded-full bg-primary"></div>
+<div class="w-2 h-2 rounded-full bg-outline-variant"></div>
+<div class="w-2 h-2 rounded-full bg-outline-variant"></div>
+</div>
+</section>
+<!-- Contact Form -->
+<section class="py-section-gap-mobile px-margin-mobile bg-white">
+<div class="mb-10">
+<h2 class="text-headline-lg-mobile font-headline-lg-mobile mb-4">Inicie su proyecto hoy</h2>
+<p class="text-body-md text-on-surface-variant">Complete el formulario y un especialista lo contactará en menos de 24 horas hábiles.</p>
+</div>
+<form class="space-y-6">
+<div>
+<label class="text-label-caps mb-2 block">NOMBRE COMPLETO</label>
+<input class="w-full border-0 border-b border-outline focus:ring-0 focus:border-primary py-3 px-0 placeholder-on-surface-variant/40" placeholder="Ej: Juan Pérez" type="text">
+</div>
+<div>
+<label class="text-label-caps mb-2 block">CORREO ELECTRÓNICO</label>
+<input class="w-full border-0 border-b border-outline focus:ring-0 focus:border-primary py-3 px-0 placeholder-on-surface-variant/40" placeholder="juan@ejemplo.com" type="email">
+</div>
+<div>
+<label class="text-label-caps mb-2 block">TIPO DE PROYECTO</label>
+<select class="w-full border-0 border-b border-outline focus:ring-0 focus:border-primary py-3 px-0 bg-transparent">
+<option>Residencial</option>
+<option>Comercial</option>
+<option>Remodelación</option>
+<option>Otro</option>
+</select>
+</div>
+<div>
+<label class="text-label-caps mb-2 block">MENSAJE</label>
+<textarea class="w-full border-0 border-b border-outline focus:ring-0 focus:border-primary py-3 px-0 placeholder-on-surface-variant/40" placeholder="Cuéntenos brevemente sobre su idea..." rows="4"></textarea>
+</div>
+<button class="w-full bg-[#C05746] text-white py-5 rounded-DEFAULT font-bold text-body-lg shadow-md active:scale-[0.98] transition-all mt-4">Enviar Solicitud</button>
+</form>
+</section>
+<!-- Footer -->
+<footer class="bg-inverse-surface text-inverse-on-surface pt-section-gap-mobile pb-8">
+<div class="px-margin-mobile space-y-12">
+<div>
+<h2 class="text-headline-md font-headline-md font-bold text-white mb-4">LSR</h2>
+<p class="text-body-md text-surface-variant/80">Construcciones Luis Sepúlveda Rejano E.I.R.L.<br>Expertos en construcción de alto estándar desde hace más de 15 años.</p>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<div class="space-y-4">
+<h3 class="text-label-caps text-secondary-fixed">MENÚ</h3>
+<ul class="space-y-3 text-body-md text-surface-variant/70">
+<li class=""><a class="hover:text-white transition-colors" href="#">Proyectos</a></li>
+<li class=""><a class="hover:text-white transition-colors" href="#">Nosotros</a></li>
+<li class=""><a class="hover:text-white transition-colors" href="#">Testimonios</a></li>
+<li class=""><a class="hover:text-white transition-colors" href="#">Contacto</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h3 class="text-label-caps text-secondary-fixed">LEGAL</h3>
+<ul class="space-y-3 text-body-md text-surface-variant/70">
+<li class=""><a class="hover:text-white transition-colors" href="#">Privacidad</a></li>
+<li class=""><a class="hover:text-white transition-colors" href="#">Términos</a></li>
+<li class=""><a class="hover:text-white transition-colors" href="#">Aviso Legal</a></li>
+</ul>
+</div>
+</div>
+<div class="flex gap-6">
+<a class="w-10 h-10 rounded-full border border-outline-variant/30 flex items-center justify-center hover:bg-white/10 transition-colors" href="#">
+<svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg>
+</a>
+<a class="w-10 h-10 rounded-full border border-outline-variant/30 flex items-center justify-center hover:bg-white/10 transition-colors" href="#">
+<svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+</a>
+</div>
+<div class="pt-8 border-t border-outline-variant/10 text-center">
+<p class="text-label-caps text-surface-variant/40">© 2024 Construcciones Luis Sepúlveda Rejano E.I.R.L. Todos los derechos reservados.</p>
+</div>
+</div>
+</footer>
+<!-- WhatsApp Floating Button -->
+<a class="fixed bottom-6 right-6 w-16 h-16 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-2xl z-[60] active:scale-90 transition-transform" href="#">
+<svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
+<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path>
+</svg>
+</a>
+
+
+</body></html>
